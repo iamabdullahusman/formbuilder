@@ -1,0 +1,95 @@
+<nz-page-header class="site-page-header" nzTitle="Abdullah's Form Builder" nzSubtitle="">
+  </nz-page-header>
+
+
+<div class="whole">
+<div class="title">
+<form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Form Title</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Description</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+    </div>
+     
+    
+  </form>
+</div>
+<!--  Quetion -->
+<div class="question">
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Types of Answers
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Checkbox</a></li>
+      <li><a class="dropdown-item" href="#">Text Area</a></li>
+      <li><a class="dropdown-item" href="#">Radio Button</a></li>
+    </ul>
+  </div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Question:</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Answer:</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+ <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+<div class="form-builder">
+    
+  
+    <button class="button" nz-button nzType="primary" (click)="addQuestion()">Add Question</button>
+  
+    <div *ngFor="let question of questions; let i = index" class="question-item">
+      <nz-card>
+        <nz-form-item>
+          <nz-form-label [nzSm]="4" [nzXs]="24">Question Label</nz-form-label>
+          <nz-form-control [nzSm]="20" [nzXs]="24">
+            <input nz-input [(ngModel)]="question.label" placeholder="Enter question label" />
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item>
+          <nz-form-label [nzSm]="4" [nzXs]="24">Question Type</nz-form-label>
+          <nz-form-control [nzSm]="20" [nzXs]="24">
+            <nz-select [(ngModel)]="question.type" nzPlaceHolder="Select question type">
+              <nz-option nzValue="text" nzLabel="Text"></nz-option>
+              <nz-option nzValue="textarea" nzLabel="Textarea"></nz-option>
+              <nz-option nzValue="radio" nzLabel="Radio"></nz-option>
+              <nz-option nzValue="checkbox" nzLabel="Checkbox"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item *ngIf="question.type === 'radio' || question.type === 'checkbox'">
+          <nz-form-label [nzSm]="4" [nzXs]="24">Options</nz-form-label>
+          <nz-form-control [nzSm]="20" [nzXs]="24">
+            <textarea nz-input [(ngModel)]="question.options" placeholder="Enter options separated by comma"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item>
+          <nz-form-label [nzSm]="4" [nzXs]="24">Required</nz-form-label>
+          <nz-form-control [nzSm]="20" [nzXs]="24">
+            <label nz-checkbox [(ngModel)]="question.required"></label>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <nz-form-item *ngIf="question.type === 'checkbox'">
+          <nz-form-label [nzSm]="4" [nzXs]="24">Multiple Answers</nz-form-label>
+          <nz-form-control [nzSm]="20" [nzXs]="24">
+            <label nz-checkbox [(ngModel)]="question.multiple"></label>
+          </nz-form-control>
+        </nz-form-item>
+  
+        <button nz-button nzType="default" (click)="removeQuestion(i)">Remove</button>
+      </nz-card>
+    </div>
+  </div>
+</div>

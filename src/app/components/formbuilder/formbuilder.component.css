@@ -1,0 +1,48 @@
+.site-page-header{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: auto;
+    background-color: rgb(240, 233, 164);
+    margin: auto;
+    
+}
+.whole{
+  background-color: rgb(245, 243, 232); 
+  height: 100%;
+  padding-top: 5%;
+}
+.title{
+  text-align: center; 
+  margin: auto 200px; 
+  height: fit-content;
+  font-size: large;
+  font-weight: bolder;
+  font-style: italic;
+  background-color: white; 
+  
+}
+
+.question{
+  text-align: center; 
+  margin: auto 200px; 
+  height: fit-content;
+  font-size: large;
+  font-weight: bolder;
+  font-style: italic;
+  background-color: white;
+  margin-top: 5%;
+}
+
+.form-builder {
+    padding: 20px;
+  }
+  
+  .question-item {
+    margin-bottom: 20px;
+  }
+  .button{
+    font-size: larger;
+    font-weight: bolder;
+  }
+ 

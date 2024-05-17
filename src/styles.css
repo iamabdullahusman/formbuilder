@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+.site-page-header .ant-page-header-heading-title {
+    text-align: center; /* Align title to the center */
+  }
