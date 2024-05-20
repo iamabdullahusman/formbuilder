@@ -1,0 +1,112 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Header styles */
+.site-page-header {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #f0e9a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-label {
+    text-align: left;
+}
+
+form {
+    text-align: left;
+    background-color: rgb(245, 243, 232)
+}
+
+.form-label2 {
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+.choice {
+    background-color: rgb(245, 243, 232)
+}
+
+/* Main container styles */
+.whole {
+    background-color: #f5f3e8;
+    min-height: 100vh;
+    /* Ensures full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Title section styles */
+.title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(245, 243, 232);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label styles */
+.form-label,
+.form-label2 {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-label2 {
+    font-size: smaller;
+    color: #888;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Full width for responsiveness */
+    background-color: transparent;
+    /* Remove unnecessary background */
+}
+
+/* Choice section styles */
+.choice {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .title {
+        margin: 1rem auto;
+    }
+}
+.submit-btn{
+    margin-top: 25px;
+}
+.form-check-input{
+    border: 1px solid black;
+}
+.question-text{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+}

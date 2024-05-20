@@ -20,7 +20,8 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzSelectModule } from 'ng-zorro-antd/select';
-import { NzLayoutModule } from 'ng-zorro-antd/layout'
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { FillformComponent } from './components/formbuilder/fillform/fillform.component'
 const icons: IconDefinition[] = [ArrowLeftOutline];
 
 registerLocaleData(en);
@@ -28,7 +29,8 @@ registerLocaleData(en);
 @NgModule({
   declarations: [
     AppComponent,
-    FormbuilderComponent
+    FormbuilderComponent,
+    FillformComponent
   ],
   imports: [
     BrowserModule,
